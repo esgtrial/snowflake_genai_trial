@@ -1,7 +1,11 @@
 # Import python packages
 import streamlit as st
 import pandas as pd
+import snowflake.connector
 from snowflake.snowpark.context import get_active_session
+
+# Initialize connection.
+conn = st.experimental_connection('snowflake', type='sql')
 
 st.set_page_config(
     page_title="Generative AI using Snowflake External Functions and OpenAI",
