@@ -1,4 +1,6 @@
+# Import python packages
 import streamlit as st
+import pandas as pd
 
 st.write(st.secrets.snowflake.user)
 
