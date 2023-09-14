@@ -13,5 +13,5 @@ conn = st.experimental_connection("snowflake")
 st.write(st.secrets.snowflake.user)
 
 # Get the current credentials
-session = get_active_session()
+# session = get_active_session()
 model = "gpt4"
