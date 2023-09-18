@@ -1,9 +1,13 @@
 # Import python packages
 import streamlit as st
 import pandas as pd
-from snowflake.snowpark import Session
 
-session = get_active_session()
+conn = st.experimental_connection('snowflake')
+
+# Perform query.
+df = conn.query('OPENAI.PUBLIC.CUSTOMER_SALES;', ttl=600)
+
+
 
 st.set_page_config(
     page_title="Generative AI using ❄️ Snowflake External Functions and OpenAI",
