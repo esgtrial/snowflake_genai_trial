@@ -1,7 +1,9 @@
 # Import python packages
 import streamlit as st
 import pandas as pd
-# from snowflake.snowpark import Session
+from snowflake.snowpark import Session
+
+session = get_active_session()
 
 st.set_page_config(
     page_title="Generative AI using ❄️ Snowflake External Functions and OpenAI",
