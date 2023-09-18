@@ -5,7 +5,7 @@ import pandas as pd
 conn = st.experimental_connection('snowflake')
 
 # Perform query.
-df = conn.query('OPENAI.PUBLIC.CUSTOMER_SALES;', ttl=600)
+df = conn.query('Select * FROM OPENAI.PUBLIC.CUSTOMER_SALES;', ttl=600)
 
 
 
